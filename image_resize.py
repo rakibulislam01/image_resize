@@ -17,12 +17,11 @@ def image_resize(src, img_height, img_weight):
     cv2.destroyAllWindows()
 
 
-# if __name__ == '__main__':
-def image_location(img_src, height, weight):
+def image_location(img_src, total_h_W):
     src = cv2.imread(img_src, cv2.IMREAD_UNCHANGED)
-    # total_logo = int(input("Input total logo number: "))
-
-    # for _ in range(total_logo):
-    #     height, weight = input().split(" ")
-    #     image_resize(src, int(height), int(weight))
-    image_resize(src, int(height), int(weight))
+    i = 0
+    j = 1
+    for _ in range(5):
+        image_resize(src, int(total_h_W[i]), int(total_h_W[j]))
+        i = i + 2
+        j = j + 2
